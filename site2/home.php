@@ -17,7 +17,5 @@
         </ul>
       </nav>
     </main>
-    <article>
-    </article>
   </body>
 </html>

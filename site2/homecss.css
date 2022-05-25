@@ -1,46 +1,53 @@
 body
 {
-  font-family: Trebuchet MS;
-  background-color: #2840fd;
-  padding: 0;
   margin: 0;
-  /*background-image: url("./pics/darkblue1.webp");*/
-}
-
-ul
-{
-  margin: 0;
-}
-
-li
-{
-  /*padding: 25px;*/
-  display: inline;
-  font-size: 30px;
-}
-
-li:hover
-{
-  color: white;
+  align-items: center;
+  align-content: center;
+  background-color: #3333cc;
+  margin-bottom: 12.5px;
 }
 
 a
 {
   text-decoration: none;
-  padding: 20px 40px;
-  margin-top: 30px;
+  color: black;
+}
+
+
+ul
+{
+  margin: 0;
+  margin-top: 12.5px;
+  padding-left: 0;
+  margin-bottom: 12.5px;
+}
+
+.pages a
+{
   color: #3CB0FF;
 }
 
 a:hover
 {
-  color: #ffffff;
+  color: white;
+}
+
+.pages li
+{
+  /*padding: 25px;*/
+  vertical-align: center;
+  font-family: Trebuchet MS;
+  display: inline;
+  font-size: 30px;
+  padding: 12.5px 25px;
+}
+
+.pages li:hover
+{
   background-color: blue;
 }
 
-.pages
+.pages li:first-of-type
 {
-  margin: 0;
-  border: 0;
-  padding: 25px;
+  margin-left: 75px;
 }
