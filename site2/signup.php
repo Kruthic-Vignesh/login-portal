@@ -19,10 +19,10 @@
     <h1>Create an account</h1>
     <form action="signup.php" method="POST">
       <fieldset>
-        <label>User Name<br><input type="text" placeholder=" User Name" name="email" /></label>
+        <label>User Name<br><input type="text" placeholder=" User Name" name="username" /></label>
       </fieldset>
       <fieldset>
-        <label>Email<br><input type="email" placeholder=" Email id" name="email" /></label>
+        <label>Email<br><input type="email" placeholder=" Email id" name="mail" /></label>
       </fieldset>
       <fieldset>
         <label>Password<br><input type="password" placeholder=" Password" name="pwd"/></label>
@@ -31,7 +31,7 @@
         <label>Confirm your password<br><input type="password" placeholder=" Re-enter" /></label>
       </fieldset>
       <fieldset>
-          <button class="submit">Submit</button>
+          <button type="submit" name="register">Submit</button>
           <br>
           <p>Registered User?  <a href="login.php">Login</a><p>
       </fieldset>
