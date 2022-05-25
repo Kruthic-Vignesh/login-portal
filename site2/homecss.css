@@ -1,0 +1,46 @@
+body
+{
+  font-family: Trebuchet MS;
+  background-color: #2840fd;
+  padding: 0;
+  margin: 0;
+  /*background-image: url("./pics/darkblue1.webp");*/
+}
+
+ul
+{
+  margin: 0;
+}
+
+li
+{
+  /*padding: 25px;*/
+  display: inline;
+  font-size: 30px;
+}
+
+li:hover
+{
+  color: white;
+}
+
+a
+{
+  text-decoration: none;
+  padding: 20px 40px;
+  margin-top: 30px;
+  color: #3CB0FF;
+}
+
+a:hover
+{
+  color: #ffffff;
+  background-color: blue;
+}
+
+.pages
+{
+  margin: 0;
+  border: 0;
+  padding: 25px;
+}
