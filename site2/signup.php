@@ -27,7 +27,7 @@
         <label>Password<br><input type="password" placeholder=" Password" name="pwd"/></label>
       </fieldset>
       <fieldset>
-        <label>Confirm your password<br><input type="password" placeholder=" Re-enter" /></label>
+        <label>Confirm your password<br><input type="password" placeholder=" Re-enter" name="repwd" /></label>
       </fieldset>
       <fieldset>
           <button type="submit" name="register">Submit</button>
@@ -44,6 +44,7 @@
         $username = $_POST['username'];
         $email = $_POST['mail'];
         $password = $_POST['pwd'];
+        $repwd = $_POST['repwd'];
 
         $sql_u = "SELECT * FROM users WHERE username='$username'";
         $sql_e = "SELECT * FROM users WHERE mail='$email'";
@@ -57,6 +58,10 @@
         else if(mysqli_num_rows($res_e) > 0)
         {
           echo "<fieldset><h3>Email id already registered!</h3></fieldset>";
+        } 
+        else if($password != $repwd)
+        {
+          echo "<fieldset><h3>Passwords don't Match!</h3></fieldset>";
         }
         else
         {

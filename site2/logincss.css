@@ -126,3 +126,21 @@ a.options
 {
   margin-right: 100px;
 }
+
+h3
+{
+  color: #4A0404;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+  text-decoration: none;
+  margin: 0;
+}
+
+h4
+{
+  color: #7CFC00;
+  font-size: 30px;
+  font-family: Trebuchet MS;
+  text-decoration: none;
+  margin: 0;
+}
