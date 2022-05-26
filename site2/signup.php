@@ -53,20 +53,20 @@
 
         if(mysqli_num_rows($res_u) > 0)
         {
-          echo "<fieldset><h3>Username already taken!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 Username already taken!</h3></fieldset>";
         }
         else if(mysqli_num_rows($res_e) > 0)
         {
-          echo "<fieldset><h3>Email id already registered!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 Email id already registered!</h3></fieldset>";
         } 
         else if($password != $repwd)
         {
-          echo "<fieldset><h3>Passwords don't Match!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 Passwords don't Match!</h3></fieldset>";
         }
         else
         {
           $query = "INSERT INTO users (username, mail, pwd) VALUES('$username', '$email', '$password') ";
-          $result = mysqli_query($db, $query) or die(mysqli_erro($db));
+          $result = mysqli_query($db, $query) or die(mysqli_error($db));
           echo "<fieldset><h4>Saved!</h4></fieldset>";
           exit();
         }

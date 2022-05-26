@@ -51,15 +51,15 @@
 
         if(mysqli_num_rows($res_u) == 0 and mysqli_num_rows($res_e) == 0)
         {
-          echo "<fieldset><h3>Entered email id/username is not registered!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 Entered email id/username is not registered!</h3></fieldset>";
         }
         else if((mysqli_num_rows($res_u) > 0 and (mysqli_num_rows($res_q1) == 0)))
         {
-          echo "<fieldset><h3>The password is incorrect!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 The password is incorrect!</h3></fieldset>";
         } 
         else if((mysqli_num_rows($res_e) > 0 and (mysqli_num_rows($res_q2) == 0)))
         {
-          echo "<fieldset><h3>The password is incorrect!</h3></fieldset>";
+          echo "<fieldset><h3>&#9888 The password is incorrect!</h3></fieldset>";
         }
         else if(mysqli_num_rows($res_q1) == 1)
         {
