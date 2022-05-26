@@ -15,13 +15,11 @@
 
 		if(mysqli_num_rows($res_u) > 0)
 		{
-			$name_error = "Username already taken!";
-			print($name_error);
+			echo "Username already taken!";
 		}
 		else if(mysqli_num_rows($res_e) > 0)
 		{
-			$name_error = "Email id already registered!";
-			print($name_error);
+			echo "Email id already registered!";
 		}
 		else
 		{

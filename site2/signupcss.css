@@ -34,11 +34,6 @@ fieldset
   background-color:  #6666ff;
 }
 
-fieldset:last-of-type
-{
-  padding-bottom: 50px;
-}
-
 label
 {
   margin-top: 100px;
@@ -120,4 +115,11 @@ a:hover
 .pages li:first-of-type
 {
   margin-left: 75px;
+}
+
+h3
+{
+  color: red;
+  font-size: 15px;
+  font-family: Trebuchet MS;
 }

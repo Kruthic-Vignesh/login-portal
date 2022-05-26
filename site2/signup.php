@@ -1,11 +1,10 @@
-<?php include ('process.php') ?>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Sign Up</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="signupcss.css" />
+    <link rel="stylesheet" type="text/css" href="signupcss2.css" />
   </head>
   <body>
       <nav class="pages">
@@ -33,8 +32,41 @@
       <fieldset>
           <button type="submit" name="register">Submit</button>
           <br>
-          <p>Registered User?  <a href="login.php">Login</a><p>
+          <p class="redirect">Registered User?  <a href="login.php">Login</a><p>
       </fieldset>
     </form>
+    <?php 
+      
+      $db = mysqli_connect("localhost", "root", "", "taken");
+
+      if(isset($_POST['register']))
+      {
+        $username = $_POST['username'];
+        $email = $_POST['mail'];
+        $password = $_POST['pwd'];
+
+        $sql_u = "SELECT * FROM users WHERE username='$username'";
+        $sql_e = "SELECT * FROM users WHERE mail='$email'";
+        $res_u = mysqli_query($db, $sql_u) or die(mysqli_error($db));
+        $res_e = mysqli_query($db, $sql_e) or die(mysqli_error($db));
+
+        if(mysqli_num_rows($res_u) > 0)
+        {
+          echo "<fieldset><h3>Username already taken!</h3></fieldset>";
+        }
+        else if(mysqli_num_rows($res_e) > 0)
+        {
+          echo "<fieldset><h3>Email id already registered!</h3></fieldset>";
+        }
+        else
+        {
+          $query = "INSERT INTO users (username, mail, pwd) VALUES('$username', '$email', '$password') ";
+          $result = mysqli_query($db, $query) or die(mysqli_erro($db));
+          echo "<fieldset><h4>Saved!</h4></fieldset>";
+          exit();
+        }
+      }
+
+    ?>
   </body>
 </html>
