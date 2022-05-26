@@ -18,7 +18,7 @@
     <h1>Login</h1>
     <form action="login.php" method="POST">
       <fieldset>
-        <label>Email<br><input type="text" placeholder=" Email id" name="email" /></label>
+        <label>Email / User Name<br><input type="text" placeholder=" Email id / username" name="email" /></label>
       </fieldset>
       <fieldset>
         <label>Password<br><input type="password" placeholder=" Password" name="pwd"/></label>
